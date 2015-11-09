@@ -1,0 +1,10 @@
+@model Misdirection.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<img src="@Url.Content(@Model.AlbumArtUrl)" class="listing_large" />
+<h2>Album: @Model.Title</h2>
+<p>Just take a look at this beautiful vehicle from @Model.Artist, an incredible landmark in the @Model.Genre category!</p>
+<p>You'll be stealing it from us at: $@Model.Price</p>

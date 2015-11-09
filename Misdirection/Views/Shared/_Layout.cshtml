@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    @*Set the viewport width to device width for mobile *@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Used Stunt Cars | @ViewBag.Title</title>
+    @*<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />*@
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    @Styles.Render("~/sass/css")
+
+    @RenderSection("head", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @*<div id="header">
+        <ul id="navlist">
+            <li class="first"><a href="/" id="current">Home</a></li>
+            <li><a href="/Store/">Store</a></li>
+        </ul>
+    </div>*@
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="/">Used Stunt Cars</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li id="nav_Home"><a href="/">Home</a></li>
+                <li id="nav_Store"><a href="/Store/">Shop Inventory</a></li>
+            </ul>
+        </section>
+    </nav>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/foundation")
+    <script>
+        $(document).foundation();
+        $(document).ready(function () {
+            var page = $(location).attr('pathname').split('/')[1]
+            if (!page == '') {
+                $("#nav_" + page).addClass("active");
+            } else {
+                $("#nav_Home").addClass("active");
+            }
+        });
+    </script>
+    @*Use the Scripts section to define page specific scripts*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

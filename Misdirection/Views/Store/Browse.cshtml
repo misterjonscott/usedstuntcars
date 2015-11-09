@@ -1,0 +1,16 @@
+@model Misdirection.Models.Genre
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h1>@Model.Name</h1>
+<div class="panel clearfix">
+    @foreach (var album in Model.Albums)
+    {
+        <a href="@Url.Action("Details", new { id = album.AlbumId })" class="listing"><img src="@Url.Content(album.AlbumArtUrl)" class="listing_small" />
+        <span class="listing_text">@album.Title</span>
+        </a>
+
+    }
+</div>
