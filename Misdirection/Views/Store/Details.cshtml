@@ -4,7 +4,18 @@
     ViewBag.Title = "Details";
 }
 
-<img src="@Url.Content(@Model.AlbumArtUrl)" class="listing_large" />
-<h2>Album: @Model.Title</h2>
-<p>Just take a look at this beautiful vehicle from @Model.Artist, an incredible landmark in the @Model.Genre category!</p>
-<p>You'll be stealing it from us at: $@Model.Price</p>
+@*<img src="@Url.Content(@Model.AlbumArtUrl)" class="listing_large" />*@
+<div class="row">
+    <div class="large-6 columns">
+        <img src="http://placehold.it/600x340&text=Photo Pending" class="listing_large" />
+    </div>
+    <div class="large-6 columns">
+        <div class="card">
+            <div class="content">
+                <span class="title">@Model.Title</span>
+                <p>(as seen in @Model.Artist.Name)</p>
+                <p class="text-right">$@Model.Price</p>
+            </div>
+        </div>
+    </div>
+</div>

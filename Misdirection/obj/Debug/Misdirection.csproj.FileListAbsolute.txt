@@ -175,3 +175,4 @@ Y:\Documents\Visual Studio 2013\Projects\Misdirection - SASS FOUNDATION\Misdirec
 Y:\Documents\Visual Studio 2013\Projects\Misdirection - SASS FOUNDATION\Misdirection\bin\zh-Hant\System.Spatial.resources.dll
 Y:\Documents\Visual Studio 2013\Projects\Misdirection - SASS FOUNDATION\Misdirection\obj\Debug\Misdirection.dll
 Y:\Documents\Visual Studio 2013\Projects\Misdirection - SASS FOUNDATION\Misdirection\obj\Debug\Misdirection.pdb
+Y:\Documents\Visual Studio 2013\Projects\Misdirection - SASS FOUNDATION\Misdirection\obj\Debug\Misdirection.csprojResolveAssemblyReference.cache

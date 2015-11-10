@@ -5,12 +5,16 @@
 }
 
 <h1>@Model.Name</h1>
-<div class="panel clearfix">
+<ul class="small-block-grid-4">
     @foreach (var album in Model.Albums)
     {
-        <a href="@Url.Action("Details", new { id = album.AlbumId })" class="listing"><img src="@Url.Content(album.AlbumArtUrl)" class="listing_small" />
-        <span class="listing_text">@album.Title</span>
-        </a>
+        <li>
+            <a href="@Url.Action("Details", new { id = album.AlbumId })" class="listing">
+                @*<img src="@Url.Content(album.AlbumArtUrl)" class="listing_small" />*@
+                <img src="http://placehold.it/600x340&text=Photo Pending" class="listing_large" />
+                <span class="listing_text">@album.Title</span>
+            </a>
+        </li>
 
     }
-</div>
+</ul>

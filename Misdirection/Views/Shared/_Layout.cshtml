@@ -38,11 +38,19 @@
             <!-- Right Nav Section -->
             <ul class="right">
                 <li id="nav_Home"><a href="/">Home</a></li>
-                <li id="nav_Store"><a href="/Store/">Shop Inventory</a></li>
+                <li id="nav_Store"><a href="/Store/">View Inventory</a></li>
             </ul>
         </section>
     </nav>
     @RenderBody()
+    <footer class="footer">
+        <div class="row">
+            <div class="small-12 columns">
+                <p class="slogan">"It's like a used celebrity!"</p>
+                <p class="copywrite">&copy; Not Actually Copyrighted 2015</p>
+            </div>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/foundation")
