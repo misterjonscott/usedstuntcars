@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Used Stunt Cars | @ViewBag.Title</title>
-    @*<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />*@
     <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
     <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
@@ -42,12 +41,13 @@
             </ul>
         </section>
     </nav>
-    <div class="row">
+    <div class="row wrapper">
         <div class="large-12 columns">
             @RenderBody()
+            <div class="push"></div>
         </div>
     </div>
-    <footer class="footer">
+    <footer>
         <div class="row">
             <div class="small-12 columns">
                 <p class="slogan">"It's like a used celebrity!"</p>

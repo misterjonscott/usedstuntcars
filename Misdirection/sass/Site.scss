@@ -3,6 +3,9 @@
 @import "normalize";
 @import "foundation";
 @import "foundation.mvc";
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+$footerHeight: 240px;
 
 @mixin text-truncate {
   overflow: hidden;
@@ -10,24 +13,85 @@
   white-space: nowrap;
 }
 
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto $footerHeight; /* the bottom margin is the negative value of the footer's height */
+}
+
 nav.top-bar {
     margin-bottom: 20px;
 }
 
 h1 {
+    font-family: 'Maven Pro', sans-serif;
     font-size: 4em;
     margin: 0 10px 10px;
-    color: teal;
+    color: $primary-color;
 }
 
 #genre-buttons {
     li {
         padding: 0;
-    }
-    a {
-        color: #fff;
-        margin: 20px;
-        display: inline-block;
+        margin: 0;
+        background-image: url("../Content/Images/filler.gif");//a default image.
+        a {
+            @include text-truncate;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            width: 250px;
+            height: 200px;
+            line-height: 200px;
+            opacity: 1;
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+            background-color: $primary-color;
+            text-align: center;
+            margin: 0;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        &.cat_Epic-Movies {
+            background-image: url("../Content/Images/epic_movies.gif");
+        }
+        &.cat_Spy-Movies {
+            background-image: url("../Content/Images/spy_movies.gif");
+        }
+        &.cat_Disaster-Movies {
+            background-image: url("../Content/Images/disaster_movies.gif");
+        }
+        &.cat_Superhero-Movies{
+            background-image: url("../Content/Images/superhero_movies.gif");
+        }
+        &.cat_Thriller-Movies{
+            background-image: url("../Content/Images/thriller_movies.gif");
+        }
+        &.cat_Martial-Arts-Movies{
+            background-image: url("../Content/Images/martial_arts_movies.gif");
+        }
+        &.cat_Video-Game-Movies{
+            background-image: url("../Content/Images/video_game_movies.gif");
+        }
+        &.cat_Dark-Fantasy-Movies{
+            background-image: url("../Content/Images/dark_fantasy_movies.gif");
+        }
+        &.cat_Epic-Western-Movies{
+            background-image: url("../Content/Images/epic_western_movies.gif");
+        }
+        &.cat_Alternative-History-Movies{
+            background-image: url("../Content/Images/alternative_history_movies.gif");
+        }
     }
 }
 
@@ -92,23 +156,29 @@ h1 {
   }
 }
 
+footer, .push {
+	height: $footerHeight;
+}
 
-.footer {
-  background-color: #292c2f;
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  padding: 4em;
-  p {
-    &.slogan {
-      color: #8d9093;
-      font-size: 1.8rem;
-      margin: 0 0 1rem;
+footer {
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    background-color: #292c2f;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 4em;
+    p {
+        &.slogan {
+            color: #8d9093;
+            font-size: 1.8rem;
+            margin: 0 0 1rem;
+        }
+        &.copywrite {
+            color: #8f9296;
+            font-size: 0.875rem;
+            margin: 0;
+        }
     }
-    &.copywrite {
-      color: #8f9296;
-      font-size: 0.875rem;
-      margin: 0;
-    }
-  }
 }

@@ -21,7 +21,7 @@ namespace Misdirection
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/sass/css").Include(
-           "~/sass/Site.css"));
+           "~/sass/Site.min.css"));
 
             #region Foundation Bundles
 
